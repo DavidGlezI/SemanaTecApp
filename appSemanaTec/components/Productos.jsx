@@ -3,6 +3,7 @@ import Producto from './Producto';
 
 function Productos(props){
     const {products, handleAdd} = props;
+    console.log(products);
     return (
         <div>
             <div className="wholeProductos">
@@ -11,7 +12,7 @@ function Productos(props){
                 </div>
                 <div className="divListaProductos">
                     {products.map((product) => (
-                        <Producto key={product.id} product={product} handleAdd = {handleAdd}></Producto>
+                        <Producto key={product._id} product={product} handleAdd = {handleAdd}></Producto>
                     ))}
                 </div>
             </div>

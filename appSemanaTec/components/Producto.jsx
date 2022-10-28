@@ -6,7 +6,7 @@ export default function Producto(props){
     return(
         <div>
             <h3>{product.name}</h3>
-            <div>${product.precio}</div>
+            <div>${product.price}</div>
             <div>
                 <button onClick={()=>handleAdd(product)}>Añadir al carrito</button>
             </div>

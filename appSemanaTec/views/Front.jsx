@@ -1,15 +1,29 @@
-import SelTienda from "/components/SelTienda"
+import Cliente from "./Cliente";
+import PedidoListo from "./PedidoListo";
+import Vendedor from "./Vendedor";
 
-function Front(){
+
+
+let path = {
+    "/":first,
+    "/Cliente":Cliente,
+    "/Vendedor":Vendedor,
+    "/PedidoListo":PedidoListo,
+}
+
+function redirect(){
+
+}
+
+function first(){
     return (
         <div>
-            <SelTienda/>
             <div className="container">
                 <div className='header'>
                     NOMBRE
                 </div>
                 <div className='buttonClient'>
-                    <button>Cliente</button>
+                    <button onClick={"location.href='/'"}>Cliente</button>
                 </div>
                 <div className='buttonVendor'>
                     <button>Vendedor</button>
@@ -19,6 +33,18 @@ function Front(){
     )
 }
 
+function Front(){
+
+   if(!path[window.location.pathname]){
+    return <div>Page not found LOKO</div>
+   }
+    return path[window.location.pathname]()
+}
+
 export default Front
 
 
+/*
+
+
+*/
