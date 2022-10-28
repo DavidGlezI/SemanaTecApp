@@ -2,10 +2,13 @@ import SelTienda from "/components/SelTienda.jsx"
 import Productos from "/components/Productos.jsx"
 import Carrito from "/components/Carrito.jsx"
 import FinPedido from "../components/FinPedido"
+import BasicSelect from "../components/BasicSelect"
 import {useState, useEffect} from "react";
 import axios from 'axios';
+import "/components/styles.css"
 
 function Cliente(){
+    
 
     const [products, setProducts] = useState(null);
     const [cartItems, setCartItems] = useState([]);
@@ -17,8 +20,8 @@ function Cliente(){
     },[]);
 
     if (!products) {
-        console.log("hola");
-        return <div>hola</div>;
+        return console.log("hola");
+        
     }
 
 
@@ -46,9 +49,12 @@ function Cliente(){
     }
 
     return (
-        <div>
-            <SelTienda/>
+        <div className="padre">
+            <div className="hijo">
+            <BasicSelect/>
             <Productos handleAdd = {handleAdd}  products = {products}/>
+            </div>
+            <div className="hijoCarrito">
             <Carrito 
             handleRemove = {handleRemove} 
             handleAdd = {handleAdd} 
@@ -57,7 +63,9 @@ function Cliente(){
             handlePedido = {handlePedido}
             cartItems = {cartItems}
             />
+            </div>
         </div>
+        
 )}
 
 export default Cliente

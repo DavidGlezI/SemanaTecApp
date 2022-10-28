@@ -1,0 +1,169 @@
+:root{
+    --primary:#F7F6DC;
+    --secondary: #3D8361;
+    --ter: #1C6758;
+    --cuarto: #FF8787;
+    
+}
+
+body{
+    background-color: var(--primary);
+}
+.padre{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-self: center;
+}
+
+.whole{
+    text-align: center;
+    background-color: var(--cuarto);
+}
+.titulo{
+    background-color: var(--cuarto);
+}
+.tituloTienda{
+    padding-top: 20px;
+    border: 2px solid var(--cuarto);
+    border-radius: 25px;
+    background-color: var(--cuarto);
+}
+.divTituloProductos{
+    margin:0;
+    padding:0;
+}
+.divBotonFin{
+    text-align: center;
+}
+
+
+.tituloProductos{
+    font-size: 40px;
+    font-weight: 900;
+    font-family: 'Arimo', sans-serif;
+    color: whitesmoke;
+    background-color: var(--secondary);
+}
+.NombreProducto{
+    font-size: 20px;
+    font-weight: 100;
+    font-style: bold;
+    
+}
+.divListaProductos{
+    background-color: var(--secondary);
+}
+
+.wholeProductos{
+    width: 100%;
+    border: 2px solid var(--ter);
+    border-radius: 25px;
+    text-align: center;
+    padding-bottom: 20px;
+    background-color: var(--secondary);
+}
+.divBotonFin{
+
+}
+.todoContainer{
+    width: 100%;
+    margin-top: 18%;
+}
+.listaCarrito{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 35px;
+    
+}
+.gridcenter{
+    display: inline-grid;
+  grid-gap: 10px;
+  justify-items: center;
+}
+.todo{
+    margin: 0;
+    padding: 0 10%;
+    background-color: var(--primary);
+    
+}
+
+
+
+.custom-select {
+    position: relative;
+    font-family: Arial;
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element: */
+  }
+  
+  .select-selected {
+    background-color: DodgerBlue;
+  }
+  
+  /* Style the arrow inside the select element: */
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  /* Point the arrow upwards when the select box is open (active): */
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  
+  /* style the items (options), including the selected item: */
+  .select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+  }
+  
+  /* Style items (options): */
+  .select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  
+  /* Hide the items when the select box is closed: */
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+
+  .botonFin{
+    width: 13rem;
+    height: 3rem;
+    background-color: #FBD341;
+    border-radius: 12px;
+  color: #1B2430;
+  font-style: bold;
+  border: 2px solid #FBD341; /* Green */
+  font-size: 15px;
+}
+
+
+
+.botonFin:hover {
+    cursor: pointer;
+    background-color: #FB9A40;
+    color:white;
+}

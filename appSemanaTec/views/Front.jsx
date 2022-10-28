@@ -1,44 +1,35 @@
-import Cliente from "./Cliente";
-import PedidoListo from "./PedidoListo";
-import Vendedor from "./Vendedor";
+
+import {Link} from "react-router-dom"
+import "./front.css"
 
 
 
-let path = {
-    "/":first,
-    "/Cliente":Cliente,
-    "/Vendedor":Vendedor,
-    "/PedidoListo":PedidoListo,
-}
 
-function redirect(){
-
-}
-
-function first(){
+function Front(){
     return (
         <div>
             <div className="container">
                 <div className='header'>
-                    NOMBRE
+                    Apoya Local
                 </div>
-                <div className='buttonClient'>
-                    <button onClick={"location.href='/'"}>Cliente</button>
+                <div className="botones">
+                <div></div>
+                <div >
+                    <Link to= "/Cliente">
+                    <button className='button'>Cliente</button>
+                    </Link>
                 </div>
-                <div className='buttonVendor'>
-                    <button>Vendedor</button>
+                <div>
+                    <Link to= "/Vendedor">
+                    <button className='button'>Vendedor</button>
+                    </Link>
                 </div>
+                <div></div>
+                </div>
+                
             </div>
         </div>
     )
-}
-
-function Front(){
-
-   if(!path[window.location.pathname]){
-    return <div>Page not found LOKO</div>
-   }
-    return path[window.location.pathname]()
 }
 
 export default Front

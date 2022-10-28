@@ -7,10 +7,12 @@ import Cliente from "/views/Cliente"
 import Vendedor from "/views/Vendedor"
 import PedidoListo from "/views/PedidoListo"
 import {BrowserRouter} from "react-router-dom"
+import { Link } from 'react-router-dom'
+import Routing from "/views/Routing"
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Front/>
+    <Routing/>
   </React.StrictMode>
 )

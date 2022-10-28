@@ -1,5 +1,6 @@
 import {useState, useEffect} from "react";
 import axios from 'axios';
+import  "./stylesV.css";
 
 function Vendedor(){
     /*
@@ -21,8 +22,7 @@ function Vendedor(){
     },[]);
 
     if (!pedidos) {
-        console.log("hola");
-        return <div>hola</div>;
+        return console.log("hola");
     }
     
     let handleClick = () => {
@@ -45,19 +45,23 @@ function Vendedor(){
 
         <div className="PContainer">
             <h1 className="pedidosTitulo">Pedidos</h1>
-            <button className="verPedido" onClick={handleClick}>Ver Pedidos</button>
+            
             <div className="divListaPedidos">
                 {pedidos.map((pedido) => (
                     <div className='pedidoContainer'>
                         <div className='pedido'>
-                            <span>Num Pedido: {pedido.id}, Fecha del pedido: {pedido.fecha}</span>
+                            <div className="pedido3">
+                            <div>Num Pedido: {pedido.id}</div>
+                            <div>Fecha del pedido: {pedido.fecha}</div>
                             <br />
-                            <br />
+                            </div>
                             {seMuestra && (
                     pedido.productos.map((pedido2) => (
-                        <div className='pedidoContainer'>
-                            <div className='pedido'>
-                                <span>Prodcto ID: {pedido2._id}, Fecha del pedido: {pedido2.price}, Nombre del producto: {pedido2.name}</span>
+                        <div className='pedidoContainer2'>
+                            <div className='pedido2'>
+                                <div>Prodcto ID: {pedido2._id}</div>
+                                <div>Precio del producto: ${pedido2.price}</div>
+                                <div>Nombre del producto: <span className="nombreP">{pedido2.name}</span></div>
                             </div>
                         </div>
                     ))
@@ -68,7 +72,7 @@ function Vendedor(){
                 ))}
                 
             </div>
-
+            <button className="verPedido" onClick={handleClick}>Ver Pedidos</button>
         </div>
     )
 }

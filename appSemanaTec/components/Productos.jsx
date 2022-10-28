@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import Producto from './Producto';
+import './styles.css'
 
 function Productos(props){
     const {products, handleAdd} = props;
     console.log(products);
     return (
-        <div>
+        <div className='todo'>
             <div className="wholeProductos">
                 <div className="divTituloProductos">
                     <h2 className="tituloProductos">Productos:</h2>
@@ -16,7 +17,7 @@ function Productos(props){
                     ))}
                 </div>
             </div>
-    </div>
+        </div>
     )
 }
 

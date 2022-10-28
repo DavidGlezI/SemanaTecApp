@@ -1,0 +1,62 @@
+.container{
+    text-align: center;
+    margin:0;
+    padding: 0;
+    margin-top: 5rem;
+    position: relative;
+    width: 100%;
+}
+
+.botones{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 4rem;
+}
+
+.button{
+    width: 9rem;
+    height: 4rem;
+    background-color: var(--secondary);
+    border-radius: 12px;
+  color: white;
+  border: 2px solid var(--primary); 
+  font-family: 'Arimo', sans-serif;
+  font-size: 20px;
+}
+
+.header{
+    font-size: 40px;
+    font-weight: 900;
+    font-family: 'Arimo', sans-serif;
+    color: var(--secondary);
+}
+
+.img2{
+    width: 100%;
+    object-fit:cover;
+    height: 100%;
+    padding:0;
+    margin:0;
+}
+
+.img3{
+    width: 100%;
+    object-fit:cover;
+    height: 30rem;
+    padding:0;
+    margin:0;
+}
+
+.wrap{
+    margin-top: 15rem;
+    text-align: center;
+}
+/*
+body{
+    background-image: url("https://d1v0r70mhs80gw.cloudfront.net/banner_gdl_futura_7cec3dea91_924ab96f07.jpeg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    height: 58.5rem;
+}
+*/

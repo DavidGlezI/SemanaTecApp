@@ -1,0 +1,55 @@
+.pedidosTitulo{
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: 'Arimo', sans-serif;
+}
+
+.verPedido{
+    margin-top: 3rem;
+}
+
+.divListaPedidos{
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Arimo', sans-serif;
+}
+.pedido2{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 50%;
+    padding-top: 1rem;
+}
+
+.pedido3{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 50%;
+    padding-top: 1rem;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Arimo', sans-serif;
+}
+
+.nombreP{
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Arimo', sans-serif;
+}
+
+.verPedido{
+    width: 8rem;
+    height: 2rem;
+    background-color: #3D8361;
+    border-radius: 12px;
+  color: white;
+  border: 2px solid var(--primary); /* Green */
+  font-size: 15px;
+}
+
+
+.verPedido:hover {
+    cursor: pointer;
+    background-color: #1C6758;
+}
