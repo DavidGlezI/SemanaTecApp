@@ -10,7 +10,7 @@ function Front(){
         <div>
             <div className="container">
                 <div className='header'>
-                    Apoya Local
+                    TusTienditas
                 </div>
                 <div className="botones">
                 <div></div>
